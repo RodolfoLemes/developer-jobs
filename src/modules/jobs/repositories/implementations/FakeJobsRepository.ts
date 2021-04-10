@@ -1,3 +1,4 @@
+import Pagination from '@modules/pagination';
 import IJobsRepository from '../IJobsRepository';
 import ICreateJobDTO from '../../dto/ICreateJobDTO';
 import Job from '../../entities/Job';
@@ -27,5 +28,13 @@ export default class FakeJobsRepository implements IJobsRepository {
     const job = this.jobs.find(findJob => findJob.url === url);
 
     return job;
+  }
+
+  public async findAllByFilter(): Promise<Pagination<Job>> {
+    return {
+      values: this.jobs,
+      total: this.jobs.length,
+      totalPages: 1,
+    };
   }
 }

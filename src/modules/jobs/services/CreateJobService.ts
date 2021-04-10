@@ -17,6 +17,7 @@ interface IRequest {
   contractType?: string;
   level?: string;
   tagsName: string[];
+  site: string;
 }
 
 @injectable()
@@ -40,6 +41,7 @@ export default class CreateJobService {
     contractType,
     level,
     tagsName,
+    site,
   }: IRequest): Promise<Job> {
     if (expired) throw new AppError('Job expired');
 
@@ -70,6 +72,7 @@ export default class CreateJobService {
       remote,
       contractType,
       level,
+      site,
     });
 
     job.tags = pickTags;

@@ -39,7 +39,10 @@ class Job {
   @Column()
   level: string;
 
-  @ManyToMany(() => Tag, tag => tag.name)
+  @Column()
+  site: string;
+
+  @ManyToMany(() => Tag, tag => tag.id)
   @JoinTable()
   tags: Tag[];
 
