@@ -24,6 +24,7 @@
     "jest.config.js",
     "prettier.config.js",
     "node_modules",
-    "dist"
+    "dist",
+    "coverage"
   ]
 }

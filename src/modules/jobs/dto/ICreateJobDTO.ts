@@ -7,4 +7,5 @@ export default interface ICreateJobDTO {
   salary?: string;
   contractType?: string;
   level?: string;
+  site: string;
 }

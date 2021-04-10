@@ -7,7 +7,9 @@ export const completeJob = {
   location: 'Maringá',
   contractType: 'CLT',
   level: 'Junior',
+  remote: true,
   tagsName: ['Node.js', 'ExpressJS', 'Docker'],
+  site: 'GeekHunter',
 };
 
 export const simpleJob = {
@@ -16,4 +18,5 @@ export const simpleJob = {
   name: 'Desenvolvedor React',
   company: 'Google',
   tagsName: ['Node.js', 'React'],
+  site: 'programathor',
 };
